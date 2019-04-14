@@ -1,0 +1,24 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "ban-types": false,
+        "no-empty-interface": false,
+        "no-string-literal": false,
+        "no-namespace": [
+            false
+        ],
+        "interface-name": [
+            false,
+            "never-prefix"
+        ],
+        "quotemark": [
+            true,
+            "single"
+        ]
+    },
+    "rulesDirectory": []
+}
