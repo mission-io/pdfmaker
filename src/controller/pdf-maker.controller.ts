@@ -15,10 +15,13 @@ export class PdfMakerController {
         const baseReq: BaseRequest = req.body;
         const ctx: TemplateModel = baseReq.data;
         const html = ctx.data ? Template.compile(ctx.template, ctx.data, {}) : ctx.template;
-        const browser = await launch();
+        const browser = await launch({
+            args: ['--no-sandbox'], // '--headless', '--disable-gpu'
+            executablePath: '/usr/bin/chromium-browser',
+        });
         const page = await browser.newPage();
         await page.setContent(html);
-        const pdf = await page.pdf({ path: `./${Date.now()}.pdf`, format: 'A4' });
+        const pdf = await page.pdf({ format: 'A4' }); // path: `./${Date.now()}.pdf`,
         await browser.close();
         return pdf;
     }
