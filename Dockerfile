@@ -32,6 +32,6 @@ RUN addgroup -S pptruser && adduser -S -g pptruser pptruser \
 # Run everything after as non-privileged user.
 USER pptruser
 
-EXPOSE 8080
+EXPOSE 3000
 COPY --from=build /app/build /app
 CMD [ "./node_modules/.bin/pm2-runtime", "start", "pm2.json" ]
