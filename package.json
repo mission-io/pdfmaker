@@ -1,6 +1,6 @@
 {
   "name": "mission.pdfmaker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "mission api ",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -35,14 +35,14 @@
     "mocha": "^6.1.4",
     "rimraf": "^2.6.3",
     "supertest": "^4.0.2",
-    "typescript": "^3.4.5"
+    "typescript": "^3.5.3"
   },
   "dependencies": {
-    "@types/puppeteer": "^1.12.3",
-    "dotenv": "^7.0.0",
-    "mission.api": "1.0.1",
+    "@types/puppeteer": "^1.12.4",
+    "dotenv": "^8.0.0",
+    "mission.api": "1.0.3",
     "mission.template": "1.0.0",
-    "pm2": "^3.5.0",
-    "puppeteer": "^1.14.0"
+    "pm2": "^3.5.1",
+    "puppeteer": "^1.18.1"
   }
 }
