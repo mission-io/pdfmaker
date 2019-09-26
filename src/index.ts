@@ -4,7 +4,7 @@ import { WebConfig } from './config';
 
 export const server = new WebServer(WebConfig, console);
 
-import './controller';
+import './import';
 const route: Router = GetRouter();
 route.use(UnAuthRoutes);
 route.use(ApplicationRoutes);

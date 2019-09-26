@@ -1,7 +1,7 @@
 {
-  "name": "mission.pdf-maker-host",
+  "name": "mio.pdf-maker",
   "version": "0.0.2",
-  "description": "mission api ",
+  "description": "mission pdf maker ",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
@@ -30,18 +30,13 @@
   },
   "license": "MIT",
   "homepage": "https://mission-io.github.io/docs/index.html",
-  "devDependencies": {
-    "@types/dotenv": "^6.1.1",
-    "rimraf": "^3.0.0",
-    "typescript": "^3.6.3"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "@types/puppeteer": "^1.19.1",
-    "mio.pdf-maker": "file:service/pdf-maker",
-    "dotenv": "^8.1.0",
-    "mission.api": "1.0.6",
-    "mission.template": "1.0.0",
-    "pm2": "^3.5.1",
-    "puppeteer": "^1.20.0"
+    "@types/puppeteer": ">=1.19.1",
+    "dotenv": ">=8.1.0",
+    "mission.api": ">=1.0.6",
+    "mission.template": ">=1.0.0",
+    "pm2": ">=3.5.1",
+    "puppeteer": ">=1.20.0"
   }
 }

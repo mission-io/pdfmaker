@@ -11,6 +11,19 @@
             "program": "${workspaceRoot}/build/index.js",
             "sourceMaps": true,
             "stopOnEntry": true
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Mac Debug Mio Cli",
+            "program": "${workspaceRoot}/node_modules/mission.cli/build/cli.js",
+            "stopOnEntry": true,
+            "args": [
+                "new",
+                "tsc",
+                "mission.pdfmaker",
+                "-v"
+            ]
         }
     ]
 }

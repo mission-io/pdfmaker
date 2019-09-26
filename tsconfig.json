@@ -21,7 +21,9 @@
         "noUnusedParameters": false
     },
     "exclude": [
+        "service",
         "node_modules",
-        "build"
+        "build",
+        "test"
     ]
 }

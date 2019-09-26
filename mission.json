@@ -1,18 +1,30 @@
 {
-    "name": "mission.pdfmaker",
-    "tsconfig": "tsconfig.json",
-    "tslint": "tslint.json",
-    "testTsconfig": "test.tsconfig.json",
-    "templatePath": "",
-    "appBasePath": "service",
-    "oas": {
-        "openapi": "3.0.0",
-        "servers": [
-            {
-                "url": "http://localhost:3000",
-                "description": "Development Server"
-            }
-        ],
-        "path": "specs"
+  "name": "mission.pdfmaker",
+  "tsconfig": "tsconfig.json",
+  "tslint": "tslint.json",
+  "templatePath": "",
+  "appBasePath": "service",
+  "scope": "mio",
+  "service": [
+    {
+      "id": 0,
+      "name": "pdf-maker",
+      "tsconfig": "tsconfig.json",
+      "testTsconfig": "test.tsconfig.json",
+      "path": "pdf-maker",
+      "dependency": [],
+      "import": false
     }
+  ],
+  "oas": {
+    "openapi": "3.0.0",
+    "servers": [
+      {
+        "url": "http://localhost:3000",
+        "description": "Development Server"
+      }
+    ],
+    "path": "specs"
+  },
+  "cliVersion": "1.0.4"
 }
