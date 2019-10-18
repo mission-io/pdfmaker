@@ -1,7 +1,7 @@
 {
-  "name": "mio.pdf-maker",
-  "version": "0.0.2",
-  "description": "mission pdf maker ",
+  "name": "mission.pdf-module",
+  "version": "0.0.1",
+  "description": "mission pdf maker module",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
@@ -9,7 +9,8 @@
     "lint": "tslint -p tsconfig.json",
     "build": "npm run lint && tsc",
     "prepublishOnly": "npm run build",
-    "build-docs": "typedoc --out ./docs"
+    "build-docs": "typedoc --out ./docs",
+    "publish": ""
   },
   "repository": {
     "type": "git",
@@ -33,10 +34,11 @@
   "devDependencies": {},
   "dependencies": {
     "@types/puppeteer": ">=1.19.1",
+    "puppeteer": ">=1.20.0"
+  },
+  "peerDependencies": {
     "dotenv": ">=8.1.0",
     "mission.api": ">=1.0.6",
-    "mission.template": ">=1.0.0",
-    "pm2": ">=3.5.1",
-    "puppeteer": ">=1.20.0"
+    "mission.template": ">=1.0.0"
   }
 }

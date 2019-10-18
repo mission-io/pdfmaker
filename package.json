@@ -1,5 +1,5 @@
 {
-  "name": "mission.pdf-maker-host",
+  "name": "mission.pdf-host",
   "version": "0.0.2",
   "description": "mission api ",
   "main": "./lib/index.js",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@types/puppeteer": "^1.19.1",
-    "mio.pdf-maker": "file:service/pdf-maker",
+    "mission.pdf-module": "file:service/pdf-module",
     "dotenv": "^8.1.0",
     "mission.api": "1.0.6",
     "mission.template": "1.0.0",

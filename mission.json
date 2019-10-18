@@ -8,10 +8,10 @@
   "service": [
     {
       "id": 0,
-      "name": "pdf-maker",
+      "name": "pdf-module",
       "tsconfig": "tsconfig.json",
       "testTsconfig": "test.tsconfig.json",
-      "path": "pdf-maker",
+      "path": "pdf-module",
       "dependency": [],
       "import": false
     }
