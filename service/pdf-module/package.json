@@ -1,6 +1,6 @@
 {
   "name": "mission.pdf-module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "mission pdf maker module",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -33,12 +33,12 @@
   "homepage": "https://mission-io.github.io/docs/index.html",
   "devDependencies": {},
   "dependencies": {
-    "@types/puppeteer": ">=1.19.1",
+    "@types/puppeteer": ">=1.20.2",
     "puppeteer": ">=1.20.0"
   },
   "peerDependencies": {
-    "dotenv": ">=8.1.0",
-    "mission.api": ">=1.0.6",
+    "dotenv": ">=8.2.0",
+    "mission.api": ">=1.0.7",
     "mission.template": ">=1.0.0"
   }
 }
