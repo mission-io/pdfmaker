@@ -16,7 +16,7 @@ export class PdfBo {
         const browser = await PdfBo.getBrowser();
         const page = await browser.newPage();
         await page.setContent(html);
-        const pdf = await page.pdf({ format: 'A4' }); // path: `./${Date.now()}.pdf`,
+        const pdf = await page.pdf(tpl.pdfOptions || { format: 'A4' }); // path: `./${Date.now()}.pdf`,
         await page.close();
         // await browser.close();
         return pdf;
