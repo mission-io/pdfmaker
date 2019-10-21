@@ -1,0 +1,20 @@
+image: node:10
+
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - cd client && cd pdf-module && npm install
+            - npm run build
+            - mv .npmrc_config .npmrc
+            - npm publish .
+  default:
+    - step:
+        script:
+          - cd service && cd pdf-module && npm install
+          - npm run build
+          - mv .npmrc_config .npmrc
+          - npm install json -g
+          - json -I -f package.json -e 'this.version=this.version.split("-")[0]+"-dev."+Date.now()'
+          - npm publish . --tag next

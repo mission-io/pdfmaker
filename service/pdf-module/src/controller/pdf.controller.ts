@@ -1,14 +1,19 @@
 import { NextFunction, Post, Request, Response, Routable } from 'mission.api';
-import { PdfBo } from '../business';
+import { PdfBo, TemplateBo } from '../business';
+import { PdfTemplateModel } from '../model';
 
 @Routable('/pdf')
-export class PdfMakerController {
+export class PdfController {
     @Post()
     public static async pdf(req: Request, res: Response, next: NextFunction) {
-        const data = req.body ? req.body.data : {};
-        return PdfMakerController.getBo().pdf(data);
+        const data: PdfTemplateModel = req.body ? req.body.data : {};
+        const html = await PdfController.getTemplateBo().compile(data);
+        return PdfController.getBo().pdf(html, data);
     }
     protected static getBo(): PdfBo {
         return new PdfBo();
+    }
+    protected static getTemplateBo(): TemplateBo {
+        return new TemplateBo();
     }
 }

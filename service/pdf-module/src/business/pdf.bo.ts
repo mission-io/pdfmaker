@@ -1,6 +1,4 @@
-import { Template } from 'mission.template';
 import { Browser, launch } from 'puppeteer';
-
 import { PdfModel } from '../model';
 
 export class PdfBo {
@@ -11,14 +9,14 @@ export class PdfBo {
             // executablePath: '/usr/bin/chromium-browser',
         }));
     }
-    public async pdf(tpl: PdfModel): Promise<any> {
-        const html = tpl.data ? Template.compile(tpl.template, tpl.data, tpl.compileOptions) : tpl.template;
+    public async pdf(html: string, pdf: PdfModel): Promise<any> {
+        // const html = tpl.data ? Template.compile(tpl.template, tpl.data, tpl.compileOptions) : tpl.template;
         const browser = await PdfBo.getBrowser();
         const page = await browser.newPage();
         await page.setContent(html);
-        const pdf = await page.pdf(tpl.pdfOptions || { format: 'A4' }); // path: `./${Date.now()}.pdf`,
+        const pdfContent = await page.pdf(pdf.pdfOptions || { format: 'A4' }); // path: `./${Date.now()}.pdf`,
         await page.close();
         // await browser.close();
-        return pdf;
+        return pdfContent;
     }
 }

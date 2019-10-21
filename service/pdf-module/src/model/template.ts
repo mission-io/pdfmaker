@@ -7,6 +7,8 @@ export interface TemplateModel {
     compileOptions?: CompileOptions;
 }
 
-export interface PdfModel extends TemplateModel {
+export interface PdfModel {
     pdfOptions?: PDFOptions;
 }
+
+export type PdfTemplateModel = PdfModel & TemplateModel;
