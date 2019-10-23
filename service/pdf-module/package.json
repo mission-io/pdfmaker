@@ -1,6 +1,6 @@
 {
   "name": "mission.pdf-module",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "mission pdf maker module",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",

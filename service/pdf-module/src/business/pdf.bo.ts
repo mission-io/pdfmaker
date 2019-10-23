@@ -5,12 +5,11 @@ export class PdfBo {
     private static browser: Browser;
     private static async getBrowser(): Promise<Browser> {
         return PdfBo.browser || (PdfBo.browser = await launch({
-            args: ['--disable-dev-shm-usage'], // '--headless', '--disable-gpu', '--no-sandbox'
+            args: ['--disable-dev-shm-usage', '--no-sandbox', '--disable-setuid-sandbox'], // '--headless', '--disable-gpu'
             // executablePath: '/usr/bin/chromium-browser',
         }));
     }
     public async pdf(html: string, pdf: PdfModel): Promise<any> {
-        // const html = tpl.data ? Template.compile(tpl.template, tpl.data, tpl.compileOptions) : tpl.template;
         const browser = await PdfBo.getBrowser();
         const page = await browser.newPage();
         await page.setContent(html);
